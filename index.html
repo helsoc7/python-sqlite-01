@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQLite CRUD Beispiel</title>
+</head>
+<body>
+
+<h1>SQLite CRUD Beispiel</h1>
+
+<!-- Datenbank-Formular -->
+<form id="dbForm">
+    <label for="vorname">Vorname:</label>
+    <input type="text" id="vorname" name="vorname" required>
+
+    <label for="nachname">Nachname:</label>
+    <input type="text" id="nachname" name="nachname" required>
+
+    <label for="geburtsdatum">Geburtsdatum:</label>
+    <input type="text" id="geburtsdatum" name="geburtsdatum" placeholder="YYYY-MM-DD" required>
+
+    <!-- CRUD-Buttons -->
+    <button type="button" onclick="insertData()">Hinzufügen</button>
+    <button type="button" onclick="readData()">Anzeigen</button>
+    <button type="button" onclick="updateData()">Aktualisieren</button>
+    <button type="button" onclick="deleteData()">Löschen</button>
+</form>
+
+<!-- Tabelle zum Anzeigen von Schülerdaten -->
+<table id="schuelerTable" border="1">
+    <tr>
+        <th>ID</th>
+        <th>Vorname</th>
+        <th>Nachname</th>
+        <th>Geburtsdatum</th>
+    </tr>
+</table>
+
+<script>
+    // Funktion zum Daten einfügen
+    function insertData() {
+        var vorname = document.getElementById('vorname').value;
+        var nachname = document.getElementById('nachname').value;
+        var geburtsdatum = document.getElementById('geburtsdatum').value;
+
+        // Hier könntest du eine XMLHttpRequest oder Fetch-API verwenden, um Daten an den Server zu senden
+        console.log('Daten einfügen:', vorname, nachname, geburtsdatum);
+    }
+
+    // Funktion zum Daten anzeigen
+    function readData() {
+        // Hier könntest du eine XMLHttpRequest oder Fetch-API verwenden, um Daten vom Server abzurufen
+        console.log('Daten anzeigen');
+    }
+
+    // Funktion zum Daten aktualisieren
+    function updateData() {
+        // Hier könntest du eine XMLHttpRequest oder Fetch-API verwenden, um Daten an den Server zu senden
+        console.log('Daten aktualisieren');
+    }
+
+    // Funktion zum Daten löschen
+    function deleteData() {
+        // Hier könntest du eine XMLHttpRequest oder Fetch-API verwenden, um Daten an den Server zu senden
+        console.log('Daten löschen');
+    }
+</script>
+
+</body>
+</html>
